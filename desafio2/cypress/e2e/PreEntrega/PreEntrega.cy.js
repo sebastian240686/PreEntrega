@@ -33,7 +33,7 @@ describe("PreEntrega",() => {
      productsPage.cargarProductos();
      homepage.clickshoppingCartButton();
      homepage.clickshowTotalPriceButton();
-
+    
 
 
     })
