@@ -1,18 +1,17 @@
-///<reference types = 'cypress' />
 export class ProductsPage{
 
-        constructor(){
+    constructor(){
 
-            this.producto1 = '#blackJacket';
-            this.producto2 = '#beigepants' ;           
-        }
+        this.producto1 ="//p[text()='Black Jacket']//following-sibling::button[@id='blackJacket']";
+        this.producto2 = "//p[text()='Beige Shorts']//following-sibling::button[@id='beigepants']" ;           
+    }
 
-        cargarProductos(){
+    cargarProductos(itemA,itemB){
 
-              cy.get(this.producto1).type('Black Jacket');
-              cy.get('#closeModal').click();
-              cy.get(this.producto2).type('Beige Shorts');
-              cy.get('#closeModal').click();
-        }
+          cy.xpath(this.producto1).type(itemA);
+          cy.get('#closeModal').click();
+          cy.xpath(this.producto2).type(itemB);
+          cy.get('#closeModal').click();
+    }
 
 }
