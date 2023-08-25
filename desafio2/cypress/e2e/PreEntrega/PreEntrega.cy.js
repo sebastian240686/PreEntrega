@@ -6,7 +6,7 @@ import { ProductsPage } from "../../support/page/productsPage";
 
 describe("PreEntrega",() => {
     let dato;
-    let items;
+   
     const loginpage = new LoginPage();
     const homepage = new HomePage();
     const productsPage = new ProductsPage();
@@ -16,9 +16,7 @@ describe("PreEntrega",() => {
         dato=data;
      })
 
-     cy.fixture('productos').then(listaDeProductos =>{
-        items=listaDeProductos;
-     })
+     
     })
 
     beforeEach("Ingreso de datos validos", () =>{
@@ -32,7 +30,9 @@ describe("PreEntrega",() => {
     })
     it("Actividad Pre Entrega", () =>{
 
-     productsPage.cargarProductos('Black Jacket', 'White Pants');
+     productsPage.cargarProductos();
+     homepage.clickshoppingCartButton();
+     homepage.clickshowTotalPriceButton();
 
 
 
