@@ -7,6 +7,6 @@ module.exports = defineConfig({
     },
     "baseUrl" : 'https://pushing-front.vercel.app/', 
     watchForFileChanges: false, 
-    defaultCommandTimeout: 15000
+    defaultCommandTimeout: 10000
   },
 });
