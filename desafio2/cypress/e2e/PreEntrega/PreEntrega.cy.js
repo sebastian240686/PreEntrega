@@ -33,12 +33,14 @@ describe("PreEntrega",() => {
     })
     it("Actividad Pre Entrega", () =>{
 
-     productsPage.choosingProduct(product.item4);
+     productsPage.choosingProduct(product.item6);
      productsPage.choosingProduct(product.item2);
      shoppingcartpage.clickshoppingCartButton();
     shoppingcartpage.clickshowTotalPriceButton();
-    shoppingcartpage.verificacionDeProductos(product.item4,product.itemPrice4);
+    shoppingcartpage.verificacionDeProductos(product.item6,product.itemPrice6);
     shoppingcartpage.verificacionDeProductos(product.item2,product.itemPrice2);
+    shoppingcartpage.totalPrice(product.itemPrice2,product.itemPrice6);
+   
   
 
 

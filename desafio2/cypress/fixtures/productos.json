@@ -1,20 +1,20 @@
 {
     "item1":"Black T-Shirt",
-    "itemPrice1":"15",
+    "itemPrice1":15,
    
     "item2":"White Pants",
-    "itemPrice2":"20",
+    "itemPrice2": 20,
    
     "item3":"Red Cap",
-    "itemPrice3":"10",
+    "itemPrice3":10,
    
     "item4":"Black Jacket",
-    "itemPrice4":"25",
+    "itemPrice4":25,
    
     "item5":"Beige Shorts",
-    "itemPrice5":"19",
+    "itemPrice5": 19,
    
     "item6": "White Shoes",
-    "itemPrice6": "30"
+    "itemPrice6": 30
    
    }
