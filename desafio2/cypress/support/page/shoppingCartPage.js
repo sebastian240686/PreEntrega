@@ -1,4 +1,4 @@
-import { contains } from "cypress/types/jquery";
+
 
 export class ShoppingCartPage{
 
@@ -19,6 +19,6 @@ export class ShoppingCartPage{
 
     verificacionDeProductos(item,itemPrice){
       cy.get(`[name ='${item}']`).should('exist');
-      cy.get(`[name ='${itemPrice}']`).should('exist');
+     cy.get(`[name ='${itemPrice}']`).should('exist');
     }
 }
