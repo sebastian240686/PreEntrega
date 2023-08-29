@@ -1,3 +1,5 @@
+import { contains } from "cypress/types/jquery";
+
 export class ShoppingCartPage{
 
       
@@ -15,11 +17,8 @@ export class ShoppingCartPage{
     cy.get(this.showTotalPriceButton).click();
 }
 
-    VerificarProductosYPrecio(){
-
-        cy.xpath(this.productAndPrice1).should('exist');
-        cy.xpath(this.productAndPrice2).should('exist');
-        
+    verificacionDeProductos(item,itemPrice){
+      cy.get(`[name ='${item}']`).should('exist');
+      cy.get(`[name ='${itemPrice}']`).should('exist');
     }
-
 }
