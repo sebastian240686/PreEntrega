@@ -30,7 +30,7 @@ describe("PreEntrega",() => {
         loginpage.writeUser(dato.username);
         loginpage.writePassword(dato.password);
         loginpage.clickLoginButton();
-        homepage.clickOnlineButton();
+        productsPage.clickOnlineButton();
     })
     it("Actividad Pre Entrega", () =>{
 
