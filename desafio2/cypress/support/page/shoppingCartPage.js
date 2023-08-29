@@ -2,10 +2,18 @@ export class ShoppingCartPage{
 
       
     constructor(){
-
-      this.productAndPrice1 ='//p[text() = "Black Jacket"]//following-sibling::p[text() ="25"]';
-      this.productAndPrice2 ='//p[text() = "Beige Shorts"]//following-sibling::p[text() ="19"]';
+      this.shoppingCartButton= '#goShoppingCart';
+      this.showTotalPriceButton = '.css-n1d5pa > .chakra-button';
     }
+
+
+    clickshoppingCartButton(){
+      cy.get(this.shoppingCartButton).click();
+  }
+
+  clickshowTotalPriceButton(){
+    cy.get(this.showTotalPriceButton).click();
+}
 
     VerificarProductosYPrecio(){
 
