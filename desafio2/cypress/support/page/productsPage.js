@@ -1,17 +1,15 @@
 export class ProductsPage{
 
     constructor(){
-
-        this.producto1 ="//p[text()='Black Jacket']//following-sibling::button[@id='blackJacket']";
-        this.producto2 = "//p[text()='Beige Shorts']//following-sibling::button[@id='beigepants']" ;           
+        this.onlineButton = '#onlineshoplink';
+        
     }
-
-    cargarProductos(itemA,itemB){
-
-          cy.xpath(this.producto1).type(itemA);
-          cy.get('#closeModal').click();
-          cy.xpath(this.producto2).type(itemB);
-          cy.get('#closeModal').click();
+    clickOnlineButton(){
+        cy.get(this.onlineButton).click();
     }
-
+    choosingProduct(items){
+        cy.get(`[value ='${items}']`).contains('button','Add to cart').click();
+         cy.get('#closeModal').click();
+     
+       }
 }

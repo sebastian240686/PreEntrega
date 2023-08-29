@@ -1,7 +1,20 @@
 {
-    "Producto1": "Black Jacket",
-    "Precio1": "25",
-    "Prodcuto2": "Beige Shorts",
-    "Precio2": "19",
-    "PrecioTotal": "44"
-}
+    "item1":"Black T-Shirt",
+    "itemPrice1":"15",
+   
+    "item2":"White Pants",
+    "itemPrice2":"20",
+   
+    "item3":"Red Cap",
+    "itemPrice3":"10",
+   
+    "item4":"Black Jacket",
+    "itemPrice4":"25",
+   
+    "item5":"Beige Shorts",
+    "itemPrice5":"19",
+   
+    "item6": "White Shoes",
+    "itemPrice6": "30"
+   
+   }
