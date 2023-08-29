@@ -1,5 +1,3 @@
-
-
 export class ShoppingCartPage{
 
       
@@ -21,4 +19,6 @@ export class ShoppingCartPage{
       cy.get(`[name ='${item}']`).should('exist');
      cy.get(`[name ='${itemPrice}']`).should('exist');
     }
+
+
 }

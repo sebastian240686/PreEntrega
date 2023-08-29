@@ -38,6 +38,7 @@ describe("PreEntrega",() => {
      shoppingcartpage.clickshoppingCartButton();
     shoppingcartpage.clickshowTotalPriceButton();
     shoppingcartpage.verificacionDeProductos(product.item4,product.itemPrice4);
+    shoppingcartpage.verificacionDeProductos(product.item2,product.itemPrice2);
   
 
 
