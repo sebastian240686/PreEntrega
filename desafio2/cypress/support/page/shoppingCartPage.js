@@ -21,8 +21,8 @@ export class ShoppingCartPage{
      cy.get(`[name ='${itemPrice}']`).should('exist');
     }
 
-  totalPrice(price,price1){
-    let total= price+price1;
+  totalPrice(total){
+    
     cy.get('#price').should('have.text',total);
   
 

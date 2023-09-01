@@ -33,13 +33,13 @@ describe("PreEntrega",() => {
     })
     it("Actividad Pre Entrega", () =>{
 
-     productsPage.choosingProduct(product.item6);
-     productsPage.choosingProduct(product.item2);
+     productsPage.choosingProduct(product.item3);
+     productsPage.choosingProduct(product.item5);
      shoppingcartpage.clickshoppingCartButton();
     shoppingcartpage.clickshowTotalPriceButton();
-    shoppingcartpage.verificacionDeProductos(product.item6,product.itemPrice6);
-    shoppingcartpage.verificacionDeProductos(product.item2,product.itemPrice2);
-    shoppingcartpage.totalPrice(product.itemPrice2,product.itemPrice6);
+    shoppingcartpage.verificacionDeProductos(product.item3,product.itemPrice3);
+    shoppingcartpage.verificacionDeProductos(product.item5,product.itemPrice5);
+    shoppingcartpage.totalPrice('29');
    
   
 
