@@ -15,6 +15,12 @@
     "itemPrice5": 19,
    
     "item6": "White Shoes",
-    "itemPrice6": 30
+    "itemPrice6": 30,
+
+    "item7" : "Black Socks",
+    "itemPrice7" : 10,
+
+    "item8" : "Pink Sweater",
+    "itemPrice" : 18
    
    }
