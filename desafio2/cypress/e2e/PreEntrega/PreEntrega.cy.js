@@ -4,9 +4,10 @@ import { CheckOutPage } from "../../support/page/checkoutPage";
 import  {LoginPage} from "../../support/page/loginpage";
 import { ProductsPage } from "../../support/page/productsPage";
 import { ShoppingCartPage } from "../../support/page/shoppingCartPage";
+import { ReciptPage } from "../../support/page/reciptPage";
 
 describe("PreEntrega",() => {
-    const randomNumber = Math.floor(Math.random()*1000);
+    const randomUser ='sebastian'+ Math.floor(Math.random()*1000);
    
     let dato;
     let productos;
@@ -14,6 +15,7 @@ describe("PreEntrega",() => {
     const productsPage = new ProductsPage();
     const shoppingCartPage = new ShoppingCartPage();
     const checkoutPage = new CheckOutPage();
+    const reciptPage = new ReciptPage();
     
     before ('iniciando', () => {
         cy.fixture('datos').then(listaDeDatos =>{
@@ -30,7 +32,7 @@ describe("PreEntrega",() => {
             url: "https://pushing-it.onrender.com/api/register",
             method: "POST",
             body:{
-                username :`pushingit${randomNumber}`,
+                username :randomUser,
                 password : '123456!',
                 gender : "Male",
                 day : "24",
@@ -48,7 +50,7 @@ describe("PreEntrega",() => {
             url: "https://pushing-it.onrender.com/api/login",
             method: 'POST',
             body : {
-                'username' : `pushingit${randomNumber}`,
+                'username' : randomUser,
                 'password' : '123456!'
             }
         }).then(answerLogin =>{
@@ -74,9 +76,26 @@ describe("PreEntrega",() => {
         checkoutPage.ingresarApellido(dato.lastName);
         checkoutPage.ingresarTarjetaDeCredito(dato.creditCardNumber);
         checkoutPage.aceptarLaCompra();
+        reciptPage.VerificacionDeNombre().should('have.text','sebastian leguisamo has succesfully purchased the following items');
+        reciptPage.verificarProducto(productos.item2);
+        reciptPage.verificarProducto(productos.item6);
+        reciptPage.verificacionDeTexto();
+        reciptPage.verificacionDeTarjetaDeCredito(dato.creditCardNumber);
+        reciptPage.verificarTotalPrice('50');
+        reciptPage.clickBotonDelTicket();
         
+       
 
 
+    })
+    after ('Eliminar usuario',()=>{
+        cy.request({
+            url: `https://pushing-it.onrender.com/api/deleteuser/${randomUser}`,
+            method: "DELETE",
+
+        }).then(answer =>{
+                expect(answer.status).to.be.equal(200);
+    })
 
     })
 
