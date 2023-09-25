@@ -7,8 +7,6 @@ import { ShoppingCartPage } from "../../support/page/shoppingCartPage";
 import { ReciptPage } from "../../support/page/reciptPage";
 
 describe("PreEntrega",() => {
-    const randomUser ='sebastian'+ Math.floor(Math.random()*1000);
-   
     let dato;
     let productos;
     const loginpage = new LoginPage();
@@ -16,6 +14,7 @@ describe("PreEntrega",() => {
     const shoppingCartPage = new ShoppingCartPage();
     const checkoutPage = new CheckOutPage();
     const reciptPage = new ReciptPage();
+    const randomUser ='sebastian'+ Math.floor(Math.random()*1000);
     
     before ('iniciando', () => {
         cy.fixture('datos').then(listaDeDatos =>{
